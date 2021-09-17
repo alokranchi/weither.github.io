@@ -1,0 +1,83 @@
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+  padding: 0 1rem;
+}
+.nav__icon {
+  width: 25%;
+  height: 80%;
+}
+
+.nav__icon > img {
+  height: 100%;
+  background-color: white;
+}
+
+.nav__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: solid 2px;s */
+  border-radius: 3rem;
+  background-color: #8b65ad;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.nav__search input {
+  width: 80%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.7rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+}
+.nav__search input::placeholder {
+  color: white;
+}
+
+.nav__search i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 20%;
+  cursor: pointer;
+  color: white;
+  font-size: 1.7rem;
+}
+.nav__search i:hover {
+  background-color: rgba(255, 255, 255, 0.151);
+}
+
+.nav__temperature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 50%;
+  width: 25%;
+}
+.nav__temperature > i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  margin: 0 2%;
+  padding: 0 2%;
+  color: white;
+  font-size: 1.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.nav__temperature > i:hover {
+  background-color: rgba(255, 255, 255, 0.151);
+}

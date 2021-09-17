@@ -1,0 +1,155 @@
+.temperature__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.24);
+  border-radius: 1rem;
+  color: rgb(255, 254, 253);
+  min-height: 300px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.temperature__container::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(0.5);
+  transition: all 1s ease;
+  background-image: url(../img/foggy.gif);
+}
+.temperature__container.Clear::before {
+  background-image: url(../img/clear.gif);
+}
+.temperature__container.Clouds::before {
+  background-image: url(../img/cloudy.gif);
+}
+.temperature__container.Rain::before {
+  background-image: url(../img/rainy.gif);
+}
+.temperature__container.Snow::before {
+  background-image: url(../img/snow.gif);
+}
+.temperature__container.Drizzle::before {
+  background-image: url(../img/drizzle.gif);
+}
+.temperature__container.Thunderstorm::before {
+  background-image: url(../img/strorm.gif);
+}
+
+.temperature__container > .temperature__time > p {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+.temperature__container > .temperature {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.temperature__container > .temperature > .degrees {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  font-size: 6rem;
+
+  font-weight: bold;
+}
+.temperature__container > .temperature > .degrees > .description {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.temperature__container > .temperature > .logo {
+  text-align: end;
+  width: 50%;
+}
+
+.temperature__container > .temperature > .logo > img {
+  width: 50%;
+}
+.temperature__container > .temperature__info > span:last-of-type {
+  margin-left: 3rem;
+  font-size: 1.8rem;
+}
+.iconify {
+  color: #e26a44;
+}
+.iconify2 {
+  color:#f3a148;
+}
+.daily__weather {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+}
+::-webkit-scrollbar {
+  height: 10px;
+
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(171, 245, 210, 0.315); 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #69d8941f; 
+}
+
+
+
+
+.iconify {
+  font-size: 3rem;
+  margin-right: 0.5rem;
+}
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid #3498db;
+  border-bottom: 10px solid #3498db;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
